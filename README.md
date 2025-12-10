@@ -7,12 +7,6 @@ Lightweight, configurable, and designed to integrate easily with automation tool
 
 ---
 
-
-## Support
-If you'd like to support development:
-
-https://buymeacoffee.com/greennuri
-
 ---
 
 ## Features
@@ -104,7 +98,3 @@ MIT License.
 
 ---
 
-## Support Again  
-If you'd like to help the project grow:
-
-https://buymeacoffee.com/greennuri
