@@ -1,0 +1,38 @@
+{
+    "name": "pomodoro-mcp",
+    "version": "0.1.0",
+    "entry_point": "mcp_server.py",
+    "description": "Pomodoro timer MCP server that provides timer tools to LLMs.",
+    "tools": {
+        "get_status": {
+            "description": "Get current timer state"
+        },
+        "start_timer": {
+            "description": "Start a pomodoro timer",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "work": {
+                        "type": "integer"
+                    },
+                    "rest": {
+                        "type": "integer"
+                    },
+                    "cycles": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "work",
+                    "rest"
+                ]
+            }
+        },
+        "stop_timer": {
+            "description": "Stop the timer"
+        },
+        "update_settings": {
+            "description": "Change default work/rest settings"
+        }
+    }
+}

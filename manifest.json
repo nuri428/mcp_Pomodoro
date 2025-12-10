@@ -1,0 +1,85 @@
+{
+    "name": "pomodoro-mcp",
+    "version": "0.1.0",
+    "description": "A Pomodoro timer MCP server.",
+    "tools": [
+        {
+            "name": "get_status",
+            "description": "Get the current status of the timer.",
+            "input_schema": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        {
+            "name": "start_timer",
+            "description": "Start a pomodoro timer with the given settings.",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "work": {
+                        "type": "integer",
+                        "description": "Focus duration in minutes"
+                    },
+                    "rest": {
+                        "type": "integer",
+                        "description": "Break duration in minutes"
+                    },
+                    "cycles": {
+                        "type": "integer",
+                        "description": "Number of cycles before long break (default: 1)",
+                        "default": 1
+                    },
+                    "long_break": {
+                        "type": "integer",
+                        "description": "Long break duration in minutes (default: 0)",
+                        "default": 0
+                    }
+                },
+                "required": [
+                    "work",
+                    "rest"
+                ]
+            }
+        },
+        {
+            "name": "stop_timer",
+            "description": "Stop the timer.",
+            "input_schema": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        {
+            "name": "update_settings",
+            "description": "Update the settings of the timer.",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "work": {
+                        "type": "integer",
+                        "description": "Focus duration in minutes"
+                    },
+                    "rest": {
+                        "type": "integer",
+                        "description": "Break duration in minutes"
+                    },
+                    "cycles": {
+                        "type": "integer",
+                        "description": "Number of cycles before long break (default: 1)",
+                        "default": 1
+                    },
+                    "long_break": {
+                        "type": "integer",
+                        "description": "Long break duration in minutes (default: 0)",
+                        "default": 0
+                    }
+                },
+                "required": [
+                    "work",
+                    "rest"
+                ]
+            }
+        }
+    ]
+}

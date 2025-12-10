@@ -1,0 +1,18 @@
+[project]
+name = "mcp-pomodoro"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "asyncio>=4.0.0",
+    "mcp>=1.23.3",
+]
+
+[project.scripts]
+# CLI Timer 실행 (옵션)
+pomodoro = "pomodoro_mcp.timer:main"
+
+# MCP 서버 엔트리 포인트
+pomodoro-mcp = "mcp_server:main"
+mcp-server = "mcp_server:main"
